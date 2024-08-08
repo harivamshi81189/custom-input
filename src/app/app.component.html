@@ -1,0 +1,17 @@
+<!-- app.component.html -->
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <app-custom-input
+    formControlName="username"
+    label="Username"
+    placeholder="Enter your username"
+  ></app-custom-input>
+
+  <app-custom-input
+    formControlName="password"
+    label="Password"
+    type="password"
+    placeholder="Enter your password"
+  ></app-custom-input>
+
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

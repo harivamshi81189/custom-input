@@ -1,0 +1,15 @@
+<!-- custom-input.component.html -->
+<div>
+  <label [for]="inputId">{{ label }}</label>
+  <div class="input-container">
+    <span style="margin-left: 10px;">$</span>
+    <input
+      [id]="inputId"
+      [type]="type"
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (input)="onInput($event)"
+      appNumberWithCommas
+    />
+  </div>
+</div>
